@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_bookly/Features/home/data/presention/views/home_view.dart';
 import 'package:my_bookly/Features/splash/presention/views/widgets/sliding_text.dart';
-import 'package:my_bookly/core/utils/assets.dart';
-
 import '../../../../../constans/constants.dart';
+import '../../../../../generated/assets.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -39,7 +38,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Image.asset(AssetsData.logo),
+        Image.asset(Assets.imagesLogo),
         const SizedBox(
           height: 5,
         ),
