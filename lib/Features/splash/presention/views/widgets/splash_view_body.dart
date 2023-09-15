@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_bookly/core/utils/assets.dart';
 
 class SplashViewBody extends StatelessWidget {
   const SplashViewBody({super.key});
@@ -6,8 +7,12 @@ class SplashViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-
+        Image.asset(AssetsData.logo),
+        const SizedBox(height: 5,),
+        const Text('Read free books',textAlign: TextAlign.center,),
       ],
     );
   }
