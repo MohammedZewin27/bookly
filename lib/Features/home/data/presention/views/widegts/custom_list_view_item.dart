@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../../generated/assets.dart';
+import '../../../../../../core/utils/assets.dart';
 
 class FeaturedListViewItem extends StatelessWidget {
   const FeaturedListViewItem({

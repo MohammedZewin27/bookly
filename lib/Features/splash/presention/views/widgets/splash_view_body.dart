@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:my_bookly/Features/home/data/presention/views/home_view.dart';
 import 'package:my_bookly/Features/splash/presention/views/widgets/sliding_text.dart';
 import '../../../../../constans/constants.dart';
-import '../../../../../generated/assets.dart';
+import '../../../../../core/utils/assets.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -56,12 +56,12 @@ class _SplashViewBodyState extends State<SplashViewBody>
     animationController.forward();
   }
 
-
   void navigatorToHome() {
     Future.delayed(
       const Duration(seconds: 2),
-          () {
-        Get.to(() => const HomeView(),transition: Transition.fade,duration: kTransitionDuration);
+      () {
+        Get.to(() => const HomeView(),
+            transition: Transition.fade, duration: kTransitionDuration);
       },
     );
   }
