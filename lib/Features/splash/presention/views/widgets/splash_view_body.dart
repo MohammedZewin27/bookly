@@ -18,13 +18,10 @@ class _SplashViewBodyState extends State<SplashViewBody>
   void initState() {
     // TODO: implement initState
     super.initState();
-    animationController =
-        AnimationController(vsync: this, duration: const Duration(seconds: 1));
-    slidingAnimation =
-        Tween<Offset>(begin: const Offset(0, 10), end: const Offset(0, 0))
-            .animate(animationController);
-    animationController.forward();
+    initSlidingAnimation();
   }
+
+
   @override
   void dispose() {
     // TODO: implement dispose
@@ -46,6 +43,15 @@ class _SplashViewBodyState extends State<SplashViewBody>
       ],
     );
   }
-}
 
+
+  void initSlidingAnimation() {
+    animationController =
+        AnimationController(vsync: this, duration: const Duration(seconds: 1));
+    slidingAnimation =
+        Tween<Offset>(begin: const Offset(0, 10), end: const Offset(0, 0))
+            .animate(animationController);
+    animationController.forward();
+  }
+}
 
