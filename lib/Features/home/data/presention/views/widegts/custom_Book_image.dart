@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../../../../../core/utils/assets.dart';
 
-class FeaturedListViewItem extends StatelessWidget {
-  const FeaturedListViewItem({
+class CustomBookImage extends StatelessWidget {
+  const CustomBookImage({
     super.key,
   });
 
@@ -13,7 +13,7 @@ class FeaturedListViewItem extends StatelessWidget {
       aspectRatio: 2.7 / 4,
       child: Container(
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(18),
           color: Colors.cyanAccent,
           image: const DecorationImage(
             image: AssetImage(Assets.imagesTestImage),
