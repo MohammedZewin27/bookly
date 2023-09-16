@@ -3,7 +3,7 @@ import 'package:my_bookly/Features/home/data/presention/views/widegts/home_view_
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
-
+  static const String routeName='/HomeView';
   @override
   Widget build(BuildContext context) {
     return const SafeArea(
