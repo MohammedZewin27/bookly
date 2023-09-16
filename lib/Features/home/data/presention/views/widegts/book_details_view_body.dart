@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:my_bookly/Features/home/data/presention/views/widegts/book_rating.dart';
 import 'package:my_bookly/Features/home/data/presention/views/widegts/custom_Book_image.dart';
+import 'package:my_bookly/Features/home/data/presention/views/widegts/similar_books_list_view.dart';
 import 'package:my_bookly/core/utils/styles.dart';
 import 'package:my_bookly/core/utils/widgets/custom_button.dart';
 
 import '../../../../../../constans/constants.dart';
 import 'books_action.dart';
 import 'custom_book_details__appBar.dart';
+import 'custom_books_listView.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
   const BookDetailsViewBody({super.key});
@@ -24,20 +26,52 @@ class BookDetailsViewBody extends StatelessWidget {
                 horizontal: MediaQuery.of(context).size.width * 0.25),
             child: const CustomBookImage(),
           ),
-          const SizedBox(height: 43,),
-          const Text('The Jungle Book',style: Styles.textStyle30,),
-          const SizedBox(height: 6,),
-           Opacity(
-             opacity: .7,
-             child: Text('Rudyard Kipling',style: Styles.textStyle18.copyWith(
-              fontStyle: FontStyle.italic,
-
-          ),),
-           ),
-          const SizedBox(height: 18,),
-          const BookRating(mainAxisAlignment: MainAxisAlignment.center,),
-          const SizedBox(height: 37,),
+          const SizedBox(
+            height: 43,
+          ),
+          const Text(
+            'The Jungle Book',
+            style: Styles.textStyle30,
+          ),
+          const SizedBox(
+            height: 6,
+          ),
+          Opacity(
+            opacity: .7,
+            child: Text(
+              'Rudyard Kipling',
+              style: Styles.textStyle18.copyWith(
+                fontStyle: FontStyle.italic,
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 18,
+          ),
+          const BookRating(
+            mainAxisAlignment: MainAxisAlignment.center,
+          ),
+          const SizedBox(
+            height: 37,
+          ),
           BooksAction(),
+          const SizedBox(
+            height: 20,
+          ),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'You can also like',
+              style: Styles.textStyle14.copyWith(fontWeight: FontWeight.w600),
+            ),
+          ),
+          const SizedBox(
+            height: 16,
+          ),
+          const SimilarBooksListView(),
+          const SizedBox(
+            height: 40,
+          ),
         ],
       ),
     );
