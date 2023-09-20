@@ -18,7 +18,7 @@ class FeatureBooksListView extends StatelessWidget {
           return SizedBox(
             height: MediaQuery.of(context).size.height * .3,
             child: ListView.builder(
-              clipBehavior: Clip.none,
+              // clipBehavior: Clip.none,
               physics: const BouncingScrollPhysics(),
               scrollDirection: Axis.horizontal,
               itemCount: state.books.items?.length,
@@ -34,7 +34,7 @@ class FeatureBooksListView extends StatelessWidget {
             ),
           );
         } else if (state is FeaturedBooksFailure) {
-          return CustomErrorWidget(message: 'state.');
+          return const CustomErrorWidget(message: 'state.');
         } else {
           return const Center(
             child: CircularProgressIndicator(),
@@ -45,10 +45,3 @@ class FeatureBooksListView extends StatelessWidget {
   }
 }
 
-class UrlImage{
-
-  String smallThumbnail;
-  String thumbnail;
-  int index;
-  UrlImage({required this.smallThumbnail, required this.thumbnail, required this.index});
-}

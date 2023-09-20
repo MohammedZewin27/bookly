@@ -17,8 +17,8 @@ class HomeRepoImpl implements HomeRepo {
     print('fetchNewSetBooks-----------------------');
     try {
       var data = await apiService.get(
-          endPoint:
-              'volumes?Filtering=free-ebooks&q=subject:Programming');
+        endPoint: 'volumes?Filtering=free-ebooks&q=subject:sports',
+      );
       BookModel bookModel = BookModel.fromJson(data);
       print(bookModel.items?[0].selfLink);
       return right(bookModel);
@@ -34,8 +34,8 @@ class HomeRepoImpl implements HomeRepo {
     print('fetchFeaturedBooks ---------------------');
     try {
       var data = await apiService.get(
-          endPoint:
-          'volumes?Filtering=free-ebooks&q=subject:Programming');
+        endPoint: 'volumes?Filtering=free-ebooks&Sorting=newest&q=subject:Programming',
+      );
       BookModel bookModel = BookModel.fromJson(data);
       // print(bookModel.items?[0].kind);
 
@@ -46,10 +46,4 @@ class HomeRepoImpl implements HomeRepo {
       );
     }
   }
-
-
-
-
-
-  }
-
+}
