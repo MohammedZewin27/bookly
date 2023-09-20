@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 
 import '../../../../../../constans/constants.dart';
 import '../../../../../../core/utils/widgets/custom_button.dart';
+import '../../../models/BookModel.dart';
 
 class BooksAction extends StatelessWidget {
-  const BooksAction({super.key});
-
+  const BooksAction({super.key, required this.bookModel});
+  final Items bookModel;
   @override
   Widget build(BuildContext context) {
     return const Padding(

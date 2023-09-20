@@ -17,7 +17,7 @@ class HomeRepoImpl implements HomeRepo {
     print('fetchNewSetBooks-----------------------');
     try {
       var data = await apiService.get(
-        endPoint: 'volumes?Filtering=free-ebooks&q=subject:sports',
+        endPoint: 'volumes?Filtering=free-ebooks&q=sports',
       );
       BookModel bookModel = BookModel.fromJson(data);
       print(bookModel.items?[0].selfLink);
@@ -34,7 +34,7 @@ class HomeRepoImpl implements HomeRepo {
     print('fetchFeaturedBooks ---------------------');
     try {
       var data = await apiService.get(
-        endPoint: 'volumes?Filtering=free-ebooks&Sorting=newest&q=subject:Programming',
+        endPoint: 'volumes?Filtering=free-ebooks&Sorting=newest&q=Programming',
       );
       BookModel bookModel = BookModel.fromJson(data);
       // print(bookModel.items?[0].kind);
@@ -46,4 +46,24 @@ class HomeRepoImpl implements HomeRepo {
       );
     }
   }
+
+
+  @override
+  Future<Either<Failure, BookModel>> fetchSimilarBooks({required String category}) async {
+    print('fetchSimilarBooks ---------------------');
+    try {
+      var data = await apiService.get(
+        endPoint: 'volumes?Filtering=free-ebooks&Sorting=relevence&q=$category',
+      );
+      BookModel bookModel = BookModel.fromJson(data);
+      // print(bookModel.items?[0].kind);
+
+      return right(bookModel);
+    } on Exception catch (e) {
+      return left(
+        ServerFailure('ERROR $e'),
+      );
+    }
+  }
+
 }
