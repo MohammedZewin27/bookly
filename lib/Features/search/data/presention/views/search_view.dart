@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_bookly/Features/search/presention/views/widgets/search_view_body.dart';
+import 'package:my_bookly/Features/search/data/presention/views/widgets/search_view_body.dart';
+
 
 class SearchView extends StatelessWidget {
   const SearchView({super.key});

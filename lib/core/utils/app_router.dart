@@ -7,8 +7,8 @@ import 'package:my_bookly/Features/home/data/presention/views/home_view.dart';
 import 'package:my_bookly/Features/home/data/presention/views_model/similar_books/similar_books_cubit.dart';
 import 'package:my_bookly/Features/home/data/repos/home_repo_impl.dart';
 import 'package:my_bookly/core/utils/service_locator.dart';
+import '../../Features/search/data/presention/views/search_view.dart';
 
-import '../../Features/search/presention/views/search_view.dart';
 import '../../Features/splash/presention/views/splash_view.dart';
 
 abstract class AppRouter{

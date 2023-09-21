@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
-import 'package:my_bookly/Features/search/presention/views/search_view.dart';
+
 import 'package:my_bookly/core/utils/assets.dart';
+
+import '../../../../../search/data/presention/views/search_view.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key});
